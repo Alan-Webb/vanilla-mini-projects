@@ -2,6 +2,9 @@ body {
   font-family: 'Lobster', sans-serif;
   font-size: 1.5rem;
   text-align: center;
+  background-color: rgb(31, 110, 31);
+  color: rgb(214, 186, 29);
+  text-shadow: 2px 2px 2px rgb(44, 39, 39);
 }
 
 #dealer-cards img,
@@ -9,6 +12,8 @@ body {
   height: 175px;
   width: 125px;
   margin: 4px;
+  box-shadow: 1px 1px 1px rgb(44, 39, 39);
+  border-radius: 4px;
 }
 
 #hit,
