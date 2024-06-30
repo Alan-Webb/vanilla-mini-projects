@@ -1,0 +1,23 @@
+body {
+  font-family: 'Lobster', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#dealer-cards img,
+#player-cards img {
+  height: 175px;
+  width: 125px;
+  margin: 4px;
+}
+
+#hit,
+#stay {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: rgb(214, 186, 29);
+  border-radius: 8px;
+  box-shadow: 1px 1px 1px rgb(44, 39, 39);
+}
