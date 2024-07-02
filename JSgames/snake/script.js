@@ -8,6 +8,9 @@ let context;
 /* SNAKE */
 let snakeX = blockSize * 5;
 let snakeY = blockSize * 5;
+/* SNAKE MOVEMENT */
+let velocityX = 0;
+let velocityY = 0;
 
 /* FOOD */
 let foodX;
@@ -20,18 +23,37 @@ window.onload = function() {
     context = board.getContext("2d");
     
     placeFood();
-    update();
+    document.addEventListener("keyup", changeDirection);
+    setInterval(update, 1000/10);
 }
 
 function update() {
     context.fillStyle="black";
     context.fillRect(0, 0, board.width, board.height);
 
-    context.fillStyle = "lime";
-    context.fillRect(snakeX, snakeY, blockSize, blockSize);
-
     context.fillStyle = "red";
     context.fillRect(foodX, foodY, blockSize, blockSize);
+
+    context.fillStyle = "lime";
+    snakeX += velocityX * blockSize;
+    snakeY += velocityY * blockSize;
+    context.fillRect(snakeX, snakeY, blockSize, blockSize);
+}
+
+function changeDirection(e) {
+  if (e.code == "ArrowUp") {
+    velocityX = 0;
+    velocityY = -1;
+  } else if (e.code == "ArrowDown") {
+    velocityX = 0;
+    velocityY = 1;
+  } else if (e.code == "ArrowLeft") {
+    velocityX = -1;
+    velocityY = 0;
+  } else if (e.code == "ArrowRight") {
+    velocityX = 1;
+    velocityY = 0;
+  }
 }
 
 function placeFood() {
