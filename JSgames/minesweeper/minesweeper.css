@@ -35,3 +35,35 @@ body {
 .x2 {
   color: green;
 }
+
+.x3 {
+  color: red;
+}
+
+.x4 {
+  color: navy;
+}
+
+.x5 {
+  color: brown;
+}
+
+.x6 {
+  color: teal
+}
+
+.x7 {
+  color: black;
+}
+
+.x8 {
+  color: grey;
+}
+
+#flag-button {
+  width: 100px;
+  height: 50px;
+  font-size: 30px;
+  background-color: lightgray;
+  border: none;
+}
