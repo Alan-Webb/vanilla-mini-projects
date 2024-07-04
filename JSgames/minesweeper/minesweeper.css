@@ -66,4 +66,5 @@ body {
   font-size: 30px;
   background-color: lightgray;
   border: none;
+  border-radius: 8px;
 }
