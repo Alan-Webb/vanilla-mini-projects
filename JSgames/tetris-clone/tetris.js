@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const zTetromino = [
     [0, width, width+1, width*2+1],
     [width+1, width+2, width*2, width*2+1],
-    [0,width, width+1, width*2+1],
+    [0, width, width+1, width*2+1],
     [width+1, width+2, width*2, width*2+1]
   ];
 
@@ -49,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //random selection
   let randomSelect = Math.floor(Math.random() * theTetrominoes.length);
-  console.log(randomSelect);
   let current = theTetrominoes[randomSelect][currentRotation];
 
   //draw tetromino
@@ -74,6 +73,22 @@ document.addEventListener("DOMContentLoaded", () => {
     currentPosition += width;
     drawTetromino();
   }
+
+  //freeze
+  function freeze() {
+    if(current.some(index => squares[currentPosition + index + width].classList..contains("taken"))) {
+      current.forEach(index => squares[currentPosition + index].classList.add("taken"));
+      //initiate new tetromino
+      randomSelect = Math.floor(Math.random() * theTetrominoes.length);
+      current = theTetrominoes[randomSelect][currentRotation];
+      currentPosition = 4;
+      drawTetromino();
+    }
+  }
+
+
+
+
 
 
 });
