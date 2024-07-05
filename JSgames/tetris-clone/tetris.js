@@ -65,27 +65,37 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  //move tetromino
+  //tetromino descent
   timerId = setInterval(moveDown, 1000);
 
   function moveDown() {
     undrawTetromino();
     currentPosition += width;
     drawTetromino();
+    freeze();
   }
 
-  //freeze
+  //freeze at bottom of screen
   function freeze() {
-    if(current.some(index => squares[currentPosition + index + width].classList..contains("taken"))) {
+    if(current.some(index => squares[currentPosition + index + width].classList.contains("taken"))) {
       current.forEach(index => squares[currentPosition + index].classList.add("taken"));
-      //initiate new tetromino
+      //spawn new tetromino
       randomSelect = Math.floor(Math.random() * theTetrominoes.length);
       current = theTetrominoes[randomSelect][currentRotation];
       currentPosition = 4;
       drawTetromino();
     }
   }
-
+  //move left
+  function moveLeft() {
+    undrawTetromino();
+    const isAtLeftEdge = current.some(index => (currentPosition + index) % width === 0);
+    if (!isAtLeftEdge) currentPosition -= 1;
+    if(current.some(index => squares[currentPosition + index].classList.contains("taken"))) {
+      currentPosition += 1;
+    }
+    drawTetromino();
+  }
 
 
 
