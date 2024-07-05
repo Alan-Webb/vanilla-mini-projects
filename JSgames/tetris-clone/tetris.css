@@ -1,6 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url(./images/background-image.jpeg) no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+h3 {
+  width: 12rem;
+}
+
+button {
+  position: absolute;
+  left: 12rem;
+}
+
+button:hover {
+  cursor: pointer;
+  
+}
+
 .container {
   display: flex;
   justify-content: center;
+}
+
+.grid,
+.mini-grid,
+h3,
+button, 
+footer {
+  background-color: rgb(131, 143, 155);
+  border: 5px solid black;
+}
+
+.mini-grid,
+h3,
+button {
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
 }
 
 .grid {
@@ -8,37 +53,31 @@
   height: 400px;
   display: flex;
   flex-wrap: wrap;
-  background-color: grey;
-  border: 5px solid black;
+  margin-left: 7rem;
 }
 
-.grid div {
-  height: 20px;
-  width: 20px;
-}
-
-.mini-grid {
-  margin-left: 50px;
-  width: 80px;
-  height: 80px;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: yellow;
-}
-
+.grid div,
 .mini-grid div {
   height: 20px;
   width: 20px;
 }
 
-h3, button {
-  background-color: grey;
-  width: 200px;
-  border: 2px solid black;
-  padding: 10px;
-  border-radius: 8px;
+.mini-grid {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  left: 12rem;
 }
 
-button {
+footer {
+  position: absolute;
+  top: 43rem;
+  width: 100vw;
   font-weight: bold;
+  padding: 20px;
+  border-left: none;
+  border-right: none;
 }
+
