@@ -55,13 +55,25 @@ document.addEventListener("DOMContentLoaded", () => {
   //draw tetromino
   function drawTetromino() {
     current.forEach(index => {
-      squares[currentPosition + index].classList.add("tetromino")
+      squares[currentPosition + index].classList.add("tetromino");
     });
   }
   
-  
+  //undraw tetromino
+  function undrawTetromino() {
+    current.forEach(index => {
+      squares[currentPosition + index].classList.remove("tetromino");
+    });
+  }
 
+  //move tetromino
+  timerId = setInterval(moveDown, 1000);
 
+  function moveDown() {
+    undrawTetromino();
+    currentPosition += width;
+    drawTetromino();
+  }
 
 
 });
