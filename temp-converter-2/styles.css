@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  background: linear-gradient(to left bottom, rgb(171, 192, 171), rgb(96, 178, 206));
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  color: darkcyan;
+}
+
+.container {
+  background: rgba(78, 87, 172, 0.3);
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(73, 19, 19, 0.3);
+  border-radius: 10px;
+  width: 85%;
+  max-width: 450px;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  font-size: 32px;
+}
+
+.temp-container {
+  width: 100%;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.input {
+  width: 220px;
+  font-family: monospace;
+  padding: 5px;
+  float: right;
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(105, 36, 36, 0.5);
+  color: rgb(17, 80, 17);
+  font-size: 18px;
+}
+
+
+.input::placeholder{
+    color: rgb(121, 113, 113);
+}

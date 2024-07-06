@@ -1,0 +1,49 @@
+body {
+  text-align: center;
+  background-color: burlywood;
+  background-image: url("https://i.pinimg.com/736x/14/ac/8c/14ac8cfd3a64b691c6e98d93cbc695dd.jpg");
+}
+
+button {
+  padding-right: 120px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 25px 125px;
+  gap: 8px;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 8px 8px;
+  background-color: goldenrod;
+}
+
+.heading {
+  font-size: 3em;
+  margin-left: -50px;
+}
+
+#d20,
+#d6,
+#d8,
+#d12,
+#d10,
+#d4 {
+  font-size: 3em;
+  padding: 5px 25px;
+  border-radius: 5px;
+  background-color: brown;
+  position: absolute;
+}
+
+#roll20,
+#roll6,
+#roll8,
+#roll12,
+#roll10,
+#roll4 {
+  font-size: 3em;
+  position: relative;
+}

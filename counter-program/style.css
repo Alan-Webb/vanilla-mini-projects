@@ -1,0 +1,30 @@
+body {
+  background: salmon;
+}
+
+.buttons {
+  padding: 10px 20px;
+  font-size: 1.5em;
+  color: white;
+  background: hsl(214, 100%, 74%);
+  border-radius: 8px;
+  box-shadow: 2px 2px black;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.buttons:hover {
+  background-color: hsl(214, 100%, 56%);
+}
+
+#countLabel {
+  display: block;
+  text-align: center;
+  font-size: 10em;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#btnContainer {
+  text-align: center;
+}
+
