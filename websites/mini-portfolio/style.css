@@ -195,3 +195,31 @@ footer,
 .project-wrapper {
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
+.download-btn:hover {
+  background-color: var(--cta-hover-color);
+}
+
+.theme-btn, 
+.download-btn:hover,
+.contact-btn:hover,
+.btn-2:hover, 
+.wrapper img:hover {
+  cursor: pointer;
+}
+
+.btn:hover, 
+.btn-2:hover,
+.project-wrapper:hover,
+.logo-container a:hover {
+  transform: scale(0.98);
+}
+
+.btn:active,
+.btn-2:active,
+.project-wrapper:active,
+.logo-container a:active {
+  transform: scale(1);
+}
+
+
