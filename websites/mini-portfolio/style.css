@@ -301,3 +301,14 @@ article p {
 footer {
   margin: 3rem 0;
 }
+/* MEDIA QUERIES */
+@media screen and (min-width: 900px) {
+  .skills,
+  .portfolio {
+    flex-direction: row;
+    width: 45rem;
+  }
+  .skills {
+    margin: 2rem;
+  }
+}
