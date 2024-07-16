@@ -112,3 +112,55 @@ article,
   border: 0.18rem solid var(--primary-bg-color);
   z-index: 1;
 }
+
+.hero-pic img,
+.wrapper img {
+  width: 100%;
+}
+
+.hero-pic img {
+  height: 100%;
+  object-fit: cover;
+  /* object-position: top 0.4rem right -1.3rem;
+  transform: scale(1.9); */
+}
+
+.hero-info h1,
+h2 {
+  font-weight: 400;
+}
+
+article p,
+.hero-info h2 {
+  color: var(--secondary-color);
+}
+
+.hero-info h2 {
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+}
+
+footer,
+.logo-container,
+.experience,
+.cta,
+.portfolio-skills,
+.btn-bg {
+  justify-content: center;
+}
+
+.experience {
+  margin: auto;
+  margin-top: 1.4rem;
+  max-width: 20rem;
+}
+
+.experience b {
+  font-weight: 500;
+}
+
+.experience h2 {
+  width: 30%;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
