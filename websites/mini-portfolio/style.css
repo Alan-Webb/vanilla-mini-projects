@@ -225,6 +225,7 @@ footer,
 .contact-btn:hover,
 .download-btn {
   background-color: var(--btn-bg-color);
+  color: white;
 }
 
 .contact-btn:hover {
@@ -301,6 +302,7 @@ article p {
 footer {
   margin: 3rem 0;
 }
+
 /* MEDIA QUERIES */
 @media screen and (min-width: 900px) {
   .skills,
