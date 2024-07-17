@@ -16,4 +16,13 @@ body {
 	height: 400px;
 	background-color: rgba(7, 26, 49, 0.6);
 	top: 182px;
+	border: 10px solid #919bbec7;
+	border-radius: 4px;
+	backdrop-filter: blur(4px);
+}
+
+.bg {
+	position: absolute;
+	height: 1000px;
+	z-index: -1;
 }
