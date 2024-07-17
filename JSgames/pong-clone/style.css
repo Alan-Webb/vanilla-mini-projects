@@ -39,3 +39,13 @@ body {
 .paddle2 {
 	right: 0;
 }
+
+.ball {
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	background: rgba(255, 255, 255, 0.9);
+	border-radius: 2px;
+	left: 290px;
+	top: 290px;
+}
