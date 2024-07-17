@@ -1,6 +1,5 @@
 /* CREATE JS REPRESENTATION FROM DOM */
 const startText = document.getElementById("startText");
-console.log(startText);
 
 /* GAME VARIABLES */
 let gameRunning = false;
@@ -11,6 +10,17 @@ document.addEventListener("keydown", startGame);
 function startGame() {
 	gameRunning = true;
 	startText.style.display = "none";
+	document.removeEventListener("keydown", startGame);
+	gameLoop();
 }
 
-startGame();
+function gameLoop() {
+	if (gameRunning) {
+		updatePaddle1();
+		setTimeout(gameLoop, 8);
+	}
+}
+
+function updatePaddle1() {
+	console.log("paddle1");
+}
