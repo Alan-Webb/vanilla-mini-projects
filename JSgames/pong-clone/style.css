@@ -58,3 +58,19 @@ body {
 	top: 2%;
 	left: calc(50% - 4px);
 }
+
+.title {
+	position: absolute;
+	top: 88px;
+	font-size: 26px;
+}
+
+.score {
+	position: absolute;
+	top: 88px;
+	display: flex;
+	width: 60px;
+	height: 60px;
+	justify-content: center;
+	align-items: center;
+}
