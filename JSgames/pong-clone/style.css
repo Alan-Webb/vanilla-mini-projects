@@ -82,3 +82,16 @@ body {
 .player2Score {
 	right: calc(50% - 200px);
 }
+
+.startText {
+	position: absolute;
+	margin: 0;
+	top: 50%;
+	z-index: 1;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	background: #222;
+	border-radius: 4px;
+	padding: 10px;
+}
