@@ -74,3 +74,11 @@ body {
 	justify-content: center;
 	align-items: center;
 }
+
+.player1Score {
+	left: calc(50% - 200px);
+}
+
+.player2Score {
+	right: calc(50% - 200px);
+}
