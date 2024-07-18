@@ -3,6 +3,8 @@ const startText = document.getElementById("startText");
 const paddle1 = document.getElementById("paddle1");
 const paddle2 = document.getElementById("paddle2");
 const ball = document.getElementById("ball");
+const player1ScoreElement = document.getElementById("player1Score");
+const player2ScoreElement = document.getElementById("player2Score");
 
 /* GAME VARIABLES */
 let gameRunning = false;
@@ -131,9 +133,11 @@ function moveBall() {
 	if (ballX <= 0) {
 		player2Score++;
 		updateScoreboard();
+		resetBall();
 	} else if (ball >= gameWidth - ball.clientWidth) {
 		player1Score++;
 		updateScoreboard();
+		resetBall();
 	}
 
 	ball.style.left = ballX + "px";
@@ -141,5 +145,13 @@ function moveBall() {
 }
 
 function updateScoreboard() {
-	
+	player1ScoreElement.textContent = player1Score;
+	player2ScoreElement.textContent = player2Score;
+}
+
+function resetBall() {
+	ballX = gameWidth / 2 - ball.clientWidth / 2;
+	ballY = gameHeight / 2 - ball.clientHeight / 2;
+	ballSpeedX = Math.random() > 0.5 ? 2 : -2;
+	ballSpeedY = Math.random() > 0.5 ? 2 : -2;
 }
