@@ -12,6 +12,8 @@ let paddle1Y = 150;
 const paddleAcceleration = 1;
 const maxPaddleSpeed = 5;
 const paddleDeceleration = 1;
+const gameHeight = 400;
+const gameWidth = 600;
 
 document.addEventListener("keydown", startGame);
 document.addEventListener("keydown", handleKeyDown);
@@ -54,6 +56,13 @@ function updatePaddle1() {
 	}
 
 	paddle1Y += paddle1Speed;
+
+	if (paddle1Y < 0) {
+		paddle1Y = 0;
+	}
+	if (paddle1Y > gameHeight - paddle1.clientHeight) {
+		paddle1Y = gameHeight - paddle1.clientHeight;
+	}
 
 	paddle1.style.top = paddle1Y + "px";
 }
