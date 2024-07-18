@@ -10,6 +10,10 @@ let paddle1Speed = 0;
 let paddle1Y = 150;
 let paddle2Speed = 0;
 let paddle2Y = 150;
+let ballX = 290;
+let ballSpeedX = 2;
+let ballY = 190;
+let ballSpeedY = 2;
 
 /* GAME CONTSTANTS */
 const paddleAcceleration = 1;
@@ -34,6 +38,7 @@ function gameLoop() {
 	if (gameRunning) {
 		updatePaddle1();
 		updatePaddle2();
+		moveBall();
 		setTimeout(gameLoop, 8);
 	}
 }
@@ -94,4 +99,9 @@ function updatePaddle2() {
 	}
 
 	paddle2.style.top = paddle2Y + "px";
+}
+
+function moveBall() {
+	ballX += ballSpeedX;
+	ballY += ballSpeedY;
 }
