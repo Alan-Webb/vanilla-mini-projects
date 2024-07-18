@@ -2,6 +2,7 @@
 const startText = document.getElementById("startText");
 const paddle1 = document.getElementById("paddle1");
 const paddle2 = document.getElementById("paddle2");
+const ball = document.getElementById("ball");
 
 /* GAME VARIABLES */
 let gameRunning = false;
@@ -104,4 +105,14 @@ function updatePaddle2() {
 function moveBall() {
 	ballX += ballSpeedX;
 	ballY += ballSpeedY;
+
+	if (ballY >= gameHeight - ball.clientHeight || ballY <= 0) {
+		ballSpeedY = -ballSpeedY;
+	}
+	if (ballX >= gameWidth - paddle2.clientWidth - ball.clientWidth && ballY >= paddle2Y) {
+		ballSpeedX = - ballSpeedX;
+	}
+
+	ball.style.left = ballX + "px";
+	ball.style.top = ballY + "px";
 }
