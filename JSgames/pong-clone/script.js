@@ -5,6 +5,9 @@ const paddle2 = document.getElementById("paddle2");
 const ball = document.getElementById("ball");
 const player1ScoreElement = document.getElementById("player1Score");
 const player2ScoreElement = document.getElementById("player2Score");
+const lossSound = document.getElementById("lossSound");
+const wallSound = document.getElementById("wallSound");
+const paddleSound = document.getElementById("paddleSound");
 
 /* GAME VARIABLES */
 let gameRunning = false;
@@ -113,6 +116,7 @@ function moveBall() {
 	// Wall collision
 	if (ballY >= gameHeight - ball.clientHeight || ballY <= 0) {
 		ballSpeedY = -ballSpeedY;
+		playSound(wallSound);
 	}
 
 	// paddle 1 collision
@@ -122,6 +126,7 @@ function moveBall() {
 		ballY <= paddle1Y + paddle1.clientHeight
 	) {
 		ballSpeedX = -ballSpeedX;
+		playSound(paddleSound);
 	}
 
 	// paddle 2 collision
@@ -131,15 +136,18 @@ function moveBall() {
 		ballY <= paddle2Y + paddle2.clientHeight
 	) {
 		ballSpeedX = -ballSpeedX;
+		playSound(paddleSound);
 	}
 	// out of gameArea collision
 	if (ballX <= 0) {
 		player2Score++;
+		playSound(lossSound);
 		updateScoreboard();
 		resetBall();
 		pauseGame();
 	} else if (ballX >= gameWidth - ball.clientWidth) {
 		player1Score++;
+		playSound(lossSound);
 		updateScoreboard();
 		resetBall();
 		pauseGame();
@@ -163,4 +171,9 @@ function resetBall() {
 function pauseGame() {
 	gameRunning = false;
 	document.addEventListener("keydown", startGame);
+}
+
+function playSound(sound) {
+	sound.currentTime = 0;
+	sound.play();
 }
