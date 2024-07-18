@@ -11,12 +11,13 @@ let paddle1Y = 150;
 /* GAME CONTSTANTS */
 const paddleAcceleration = 1;
 const maxPaddleSpeed = 5;
+const paddleDeceleration = 1;
 
 document.addEventListener("keydown", startGame);
 document.addEventListener("keydown", handleKeyDown);
 document.addEventListener("keyup", handleKeyUp);
 
-/* START GAME*/
+/* START GAME */
 function startGame() {
 	gameRunning = true;
 	startText.style.display = "none";
@@ -44,6 +45,12 @@ function updatePaddle1() {
 		paddle1Speed = Math.max(paddle1Speed - paddleAcceleration, -maxPaddleSpeed);
 	} else if (keysPressed["s"]) {
 		paddle1Speed = Math.min(paddle1Speed + paddleAcceleration, maxPaddleSpeed);
+	} else {
+		if (paddle1Speed > 0) {
+			paddle1Speed = Math.max(paddle1Speed - paddleDeceleration, 0);
+		} else if (paddle1Speed < 0) {
+			paddle1Speed = Math.min(paddle1Speed + paddleDeceleration, 0);
+		}
 	}
 
 	paddle1Y += paddle1Speed;
