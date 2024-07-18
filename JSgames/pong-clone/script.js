@@ -1,10 +1,13 @@
-/* CREATE JS REPRESENTATION FROM DOM */
+/* JS REPRESENTATION FROM DOM */
 const startText = document.getElementById("startText");
 
 /* GAME VARIABLES */
 let gameRunning = false;
+let keysPressed = {};
 
 document.addEventListener("keydown", startGame);
+document.addEventListener("keydown", handleKeyDown);
+document.addEventListener("keyup", handleKeyUp);
 
 /* START GAME*/
 function startGame() {
@@ -21,6 +24,14 @@ function gameLoop() {
 	}
 }
 
+function handleKeyDown(e) {
+	keysPressed[e.key] = true;
+}
+
+function handleKeyUp(e) {
+	keysPressed[e.key] = false;
+}
+
 function updatePaddle1() {
-	console.log("paddle1");
+	console.log(keysPressed);
 }
