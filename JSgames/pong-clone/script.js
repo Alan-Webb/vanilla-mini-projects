@@ -1,9 +1,16 @@
 /* JS REPRESENTATION FROM DOM */
 const startText = document.getElementById("startText");
+const paddle1 = document.getElementById("paddle1");
 
 /* GAME VARIABLES */
 let gameRunning = false;
 let keysPressed = {};
+let paddle1Speed = 0;
+let paddle1Y = 150;
+
+/* GAME CONTSTANTS */
+const paddleAcceleration = 1;
+const maxPaddleSpeed = 5;
 
 document.addEventListener("keydown", startGame);
 document.addEventListener("keydown", handleKeyDown);
@@ -33,5 +40,13 @@ function handleKeyUp(e) {
 }
 
 function updatePaddle1() {
-	console.log(keysPressed);
+	if (keysPressed["w"]) {
+		paddle1Speed = Math.max(paddle1Speed - paddleAcceleration, -maxPaddleSpeed);
+	} else if (keysPressed["s"]) {
+		paddle1Speed = Math.min(paddle1Speed + paddleAcceleration, maxPaddleSpeed);
+	}
+
+	paddle1Y += paddle1Speed;
+
+	paddle1.style.top = paddle1Y + "px";
 }
