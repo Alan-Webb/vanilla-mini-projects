@@ -17,8 +17,8 @@ let ballX = 290;
 let ballSpeedX = 2;
 let ballY = 190;
 let ballSpeedY = 2;
-let player1Score = 0;
 let player2Score = 0;
+let player1Score = 0;
 
 /* GAME CONTSTANTS */
 const paddleAcceleration = 1;
@@ -110,9 +110,11 @@ function moveBall() {
 	ballX += ballSpeedX;
 	ballY += ballSpeedY;
 
+	// Wall collision
 	if (ballY >= gameHeight - ball.clientHeight || ballY <= 0) {
 		ballSpeedY = -ballSpeedY;
 	}
+
 	// paddle 1 collision
 	if (
 		ballX <= paddle1.clientWidth &&
@@ -121,6 +123,7 @@ function moveBall() {
 	) {
 		ballSpeedX = -ballSpeedX;
 	}
+
 	// paddle 2 collision
 	if (
 		ballX >= gameWidth - paddle2.clientWidth - ball.clientWidth &&
@@ -134,12 +137,13 @@ function moveBall() {
 		player2Score++;
 		updateScoreboard();
 		resetBall();
-	} else if (ball >= gameWidth - ball.clientWidth) {
+		pauseGame();
+	} else if (ballX >= gameWidth - ball.clientWidth) {
 		player1Score++;
 		updateScoreboard();
 		resetBall();
+		pauseGame();
 	}
-
 	ball.style.left = ballX + "px";
 	ball.style.top = ballY + "px";
 }
@@ -154,4 +158,9 @@ function resetBall() {
 	ballY = gameHeight / 2 - ball.clientHeight / 2;
 	ballSpeedX = Math.random() > 0.5 ? 2 : -2;
 	ballSpeedY = Math.random() > 0.5 ? 2 : -2;
+}
+
+function pauseGame() {
+	gameRunning = false;
+	document.addEventListener("keydown", startGame);
 }
