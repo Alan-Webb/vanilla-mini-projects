@@ -5,4 +5,13 @@ const count = document.getElementById("count");
 const total = document.getElementById("total");
 const movieSelect = document.getAnimations("movie");
 
-const ticketPrice = movieSelect.values;
+const ticketPrice = +movieSelect.value; // shorthand for parseInt
+
+container.addEventListener("click", (e) => {
+	if (
+		e.target.classList.contains("seat") &&
+		!e.target.classList.contains("occupied")
+	) {
+		e.target.classList.toggle("selected");
+	}
+});
