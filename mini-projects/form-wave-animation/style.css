@@ -37,6 +37,30 @@ body {
 	width: 300px;
 }
 
+.btn {
+	cursor: pointer;
+	display: inline-block;
+	width: 100%;
+	background-color: lightblue;
+	padding: 15px;
+	font-family: inherit;
+	font-size: 16px;
+	border: 0;
+	border-radius: 5px;
+}
+
+.btn:focus {
+	outline: 0;
+}
+
+.btn:active {
+	transform: scale(0.98);
+}
+
+.text {
+	margin-top: 30px;
+}
+
 .form-control input {
 	background-color: transparent;
 	border: 0;
