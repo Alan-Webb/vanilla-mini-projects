@@ -1,9 +1,9 @@
 // JS representation from DOM
 const jokeEl = document.getElementById("joke");
-const joekBtn = document.getElementById("jokeBtn");
+const jokeBtn = document.getElementById("jokeBtn");
 
 //Event listeners
-joekBtn.addEventListener("click", generateJoke);
+jokeBtn.addEventListener("click", generateJoke);
 
 generateJoke();
 
