@@ -33,5 +33,12 @@ function highlightCups(idx) {
 
 function updateBigCup() {
 	const fullCups = document.querySelectorAll(".cup-small.full").length;
-	console.log(fullCups);
+	const totalCups = smallCups.length;
+	if (fullCups === 0) {
+		percentage.style.visibility = "hidden";
+		percentage.style.height = 0;
+	} else {
+		percentage.style.visibility = "visible";
+		percentage.style.height = `${(fullCups / totalCups) * 330}px`;
+	}
 }
