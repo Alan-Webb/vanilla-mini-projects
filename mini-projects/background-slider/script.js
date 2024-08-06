@@ -4,11 +4,18 @@ const slides = document.querySelectorAll(".slide");
 const leftBtn = document.getElementById("left");
 const rightBtn = document.getElementById("right");
 
+// global vars
 let activeSlide = 0;
 
 setBgToBody();
 
+// sets image to DOM body
 function setBgToBody() {
 	body.style.backgroundImage = slides[activeSlide].style.backgroundImage;
 }
 
+// creates node list of slides & add/remove active class
+function setActiveSlide() {
+	slides.forEach((slide) => slide.classList.remove("active"));
+	slides[activeSlide].classList.add("active");
+}
