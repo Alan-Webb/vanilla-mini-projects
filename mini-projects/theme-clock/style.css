@@ -59,7 +59,6 @@ body {
 	position: relative;
 	width: 200px;
 	height: 200px;
-	background-color: lightgray;
 }
 
 .needle {
@@ -85,4 +84,27 @@ body {
 	transform: translate(-50%, -100%) rotate(0deg);
 	height: 100px;
 	background-color: #e74c3c;
+}
+
+.center-point {
+	background-color: #e74c3c;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+}
+
+.center-point:after {
+	content: "";
+	background-color: var(--primary-color);
+	width: 5px;
+	height: 5px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
 }
