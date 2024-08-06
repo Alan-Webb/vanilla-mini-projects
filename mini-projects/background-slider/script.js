@@ -7,6 +7,17 @@ const rightBtn = document.getElementById("right");
 // global vars
 let activeSlide = 0;
 
+// event listeners
+rightBtn.addEventListener("click", () => {
+	activeSlide++;
+
+	if (activeSlide > slides.length - 1) {
+		activeSlide = 0;
+	}
+	setBgToBody();
+	setActiveSlide();
+});
+
 setBgToBody();
 
 // sets image to DOM body
