@@ -1,7 +1,7 @@
 // JS representaion from DOM
 const buttons = document.querySelectorAll(".ripple");
 
-// Maps button coords via click
+// circle animation
 buttons.forEach((button) => {
 	button.addEventListener("click", function (e) {
 		const x = e.clientX;
@@ -19,5 +19,7 @@ buttons.forEach((button) => {
 		circle.style.left = xInside + "px";
 
 		this.appendChild(circle);
+
+		setTimeout(() => circle.remove(), 500);
 	});
 });
