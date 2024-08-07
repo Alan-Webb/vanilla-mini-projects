@@ -1,7 +1,9 @@
+// JS representation from DOM
+const fill = (document.querySelector = ".fill");
+const empties = (document.querySelectorAll = ".empty");
 
 
-
-
+// Drag N Drop functions
 function dragStart() {
 	console.log("drag start");
 }
