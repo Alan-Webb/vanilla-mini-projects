@@ -2,6 +2,13 @@
 const fill = (document.querySelector = ".fill");
 const empties = (document.querySelectorAll = ".empty");
 
+// Event listeners
+fill.addEventListener("dragstart", dragStart);
+fill.addEventListener("dragend", dragEnd);
+fill.addEventListener("dragover", dragOver);
+fill.addEventListener("dragenter", dragEnter);
+fill.addEventListener("dragleave", dragLeave);
+fill.addEventListener("dragdrop", dragDrop);
 
 // Drag N Drop functions
 function dragStart() {
