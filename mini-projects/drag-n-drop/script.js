@@ -1,6 +1,6 @@
 // JS representation from DOM
-const fill = (document.querySelector = ".fill");
-const empties = (document.querySelectorAll = ".empty");
+const fill = document.querySelector(".fill");
+const empties = document.querySelectorAll(".empty");
 
 // Event listeners
 fill.addEventListener("dragstart", dragStart);
@@ -10,25 +10,33 @@ for (const empty of empties) {
 	empty.addEventListener("dragover", dragOver);
 	empty.addEventListener("dragenter", dragEnter);
 	empty.addEventListener("dragleave", dragLeave);
-	empty.addEventListener("dragdrop", dragDrop);
+	empty.addEventListener("drop", dragDrop);
 }
 
 // Drag N Drop functions
 function dragStart() {
-	console.log("drag start");
+	this.className += " hold";
+	setTimeout(() => (this.className = "invisible"), 0);
 }
+
 function dragEnd() {
-	console.log("drag end");
+	this.className = "fill";
 }
-function dragOver() {
-	console.log("drag over");
+
+function dragOver(e) {
+	e.preventDefault();
 }
-function dragEnter() {
-	console.log("drag enter");
+
+function dragEnter(e) {
+	e.preventDefault();
+	this.className += " hovered";
 }
+
 function dragLeave() {
-	console.log("drag leave");
+	this.className = "empty";
 }
+
 function dragDrop() {
-	console.log("drag drop");
+	this.className = "empty";
+	this.append(fill);
 }
