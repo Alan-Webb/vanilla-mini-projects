@@ -21,10 +21,21 @@ body {
 }
 
 .fill {
-	background-image: url("https://source.unsplash.com/random/150x150");
+	background-image: url("https://images.unsplash.com/photo-1655437448311-89b3e152ce31?q=80&w=1462&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+	background-size: cover;
 	height: 145px;
 	width: 145px;
 	cursor: pointer;
+}
+
+.hold {
+	border: 5px solid #ccc;
+}
+
+.hovered {
+	background-color: #333;
+	border-color: #fff;
+	border-style: dashed;
 }
 
 /* Media queries */
