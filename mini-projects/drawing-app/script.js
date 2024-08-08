@@ -6,9 +6,19 @@ const ctx = canvas.getContext("2d");
 
 // Global vars
 let size = 20;
+let isPressed = false;
 let color = "black";
 let x;
 let y;
+
+// Event listeners
+canvas.addEventListener("mousedown", (e) => {
+	isPressed = true;
+
+	x = e.offsetX;
+	y = e.offsetY;
+	console.log(isPressed, x, y);
+});
 
 // Generates starting point for brush position
 function drawCircle(x, y) {
