@@ -7,7 +7,10 @@ const ctx = canvas.getContext("2d");
 // Global vars
 let size = 20;
 let color = "black";
+let x;
+let y;
 
+// Generates starting point for brush position
 function drawCircle(x, y) {
 	ctx.beginPath();
 	ctx.arc(x, y, size, 0, Math.PI * 2);
@@ -15,6 +18,7 @@ function drawCircle(x, y) {
 	ctx.fill();
 }
 
+// Maps brush position
 function drawLine(x1, y1, x2, y2) {
 	ctx.beginPath();
 	ctx.moveTo(x1, y1);
@@ -23,6 +27,3 @@ function drawLine(x1, y1, x2, y2) {
 	ctx.lineWidth = size;
 	ctx.stroke();
 }
-
-drawCircle(100, 200);
-drawLine(300, 300, 300, 500);
