@@ -64,6 +64,10 @@ decreaseBtn.addEventListener("click", () => {
 	updateSizeOnScreen();
 });
 
+clearEl.addEventListener("click", () =>
+	ctx.clearRect(0, 0, canvas.width, canvas.height)
+);
+
 // Generates starting point for brush position
 function drawCircle(x, y) {
 	ctx.beginPath();
@@ -82,6 +86,7 @@ function drawLine(x1, y1, x2, y2) {
 	ctx.stroke();
 }
 
+// Updates brush size
 function updateSizeOnScreen() {
 	sizeEl.innerText = size;
 }
