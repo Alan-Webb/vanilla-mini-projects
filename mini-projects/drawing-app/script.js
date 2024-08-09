@@ -48,6 +48,14 @@ canvas.addEventListener("mousemove", (e) => {
 // Toolbox buttons
 colorEl.addEventListener("change", (e) => (color = e.target.value));
 
+increaseBtn.addEventListener("click", () => {
+	size += 5;
+	if (size > 50) {
+		size = 50;
+	}
+	updateSizeOnScreen();
+});
+
 // Generates starting point for brush position
 function drawCircle(x, y) {
 	ctx.beginPath();
@@ -65,3 +73,4 @@ function drawLine(x1, y1, x2, y2) {
 	ctx.lineWidth = size * 2;
 	ctx.stroke();
 }
+
