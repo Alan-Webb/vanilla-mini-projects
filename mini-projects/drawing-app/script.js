@@ -10,13 +10,14 @@ const clearEl = document.getElementById("clear");
 const ctx = canvas.getContext("2d");
 
 // Global vars
-let size = 20;
+let size = 10;
 let isPressed = false;
 let color = "black";
 let x;
 let y;
 
 // Event listeners
+// Mouse press / move
 canvas.addEventListener("mousedown", (e) => {
 	isPressed = true;
 
@@ -43,6 +44,9 @@ canvas.addEventListener("mousemove", (e) => {
 		y = y2;
 	}
 });
+
+// Toolbox buttons
+colorEl.addEventListener("change", (e) => (color = e.target.value));
 
 // Generates starting point for brush position
 function drawCircle(x, y) {
