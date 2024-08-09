@@ -20,6 +20,14 @@ canvas.addEventListener("mousedown", (e) => {
 	console.log(isPressed, x, y);
 });
 
+canvas.addEventListener("mouseup", (e) => {
+	isPressed = false;
+
+	x = undefined;
+	y = undefined;
+	console.log(isPressed, x, y);
+});
+
 // Generates starting point for brush position
 function drawCircle(x, y) {
 	ctx.beginPath();
