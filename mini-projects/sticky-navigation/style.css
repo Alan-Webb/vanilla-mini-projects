@@ -35,6 +35,20 @@ body {
 	transition: all 0.3s ease-in-out;
 }
 
+.nav ul {
+	display: flex;
+	list-style-type: none;
+	align-items: center;
+	justify-content: center;
+}
+
+.nav a {
+	color: #fff;
+	text-decoration: none;
+	padding: 7px 15px;
+	transition: all 0.3s ease-in-out;
+}
+
 /* HERO */
 .hero {
 	background-image: url("https://images.pexels.com/photos/2681405/pexels-photo-2681405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
