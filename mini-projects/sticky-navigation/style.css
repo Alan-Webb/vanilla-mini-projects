@@ -11,3 +11,24 @@ body {
 	color: #222;
 	padding-bottom: 50px;
 }
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* NAVBAR */
+.hero {
+	background-image: url("https://images.pexels.com/photos/2681405/pexels-photo-2681405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom center;
+	height: 100vh;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	margin-bottom: 20px;
+}
