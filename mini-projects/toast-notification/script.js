@@ -17,4 +17,10 @@ function createNotification() {
 	notif.classList.add("toast");
 
 	notif.innerText = getRandomMessage();
+
+	toasts.appendChild(notif);
+}
+
+function getRandomMessage() {
+	return messages[Math.floor(Math.random() * messages.length)];
 }
