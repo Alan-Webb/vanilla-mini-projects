@@ -12,6 +12,7 @@ const messages = [
 // Event listeners
 button.addEventListener("click", () => createNotification());
 
+// Dynamically generates message div
 function createNotification() {
 	const notif = document.createElement("div");
 	notif.classList.add("toast");
@@ -19,8 +20,13 @@ function createNotification() {
 	notif.innerText = getRandomMessage();
 
 	toasts.appendChild(notif);
+
+	setTimeout(() => {
+		notif.remove();
+	}, 3000);
 }
 
+// Generates messages
 function getRandomMessage() {
 	return messages[Math.floor(Math.random() * messages.length)];
 }
