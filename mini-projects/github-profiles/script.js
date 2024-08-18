@@ -1,6 +1,8 @@
 const APIURL = "https://api.github.com/users/";
 
-getUser("alan-webb");
+//JS representation form DOM
+const form = document.getElementById("form");
+const search = document.getElementById("search");
 
 async function getUser(username) {
 	try {
@@ -10,3 +12,13 @@ async function getUser(username) {
 		console.log(err);
 	}
 }
+
+// Event listeners
+form.addEventListener("submit", (e) => {
+	e.preventDefault();
+	const user = e.search.value;
+	if (user) {
+		getUser(user);
+		search.value = "";
+	}
+});
