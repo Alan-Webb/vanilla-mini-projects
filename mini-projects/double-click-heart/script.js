@@ -4,6 +4,7 @@ const times = document.querySelector("#times");
 
 // Global vars
 let clickTime = 0;
+let timesClicked = 0;
 
 // Event listeners
 loveMe.addEventListener("click", (e) => {
@@ -38,4 +39,6 @@ const createHeart = (e) => {
 	heart.style.left = `${xInside}px`;
 
 	loveMe.appendChild(heart);
+
+	times.innerHTML = ++timesClicked;
 };
