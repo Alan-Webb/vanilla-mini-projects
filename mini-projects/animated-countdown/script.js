@@ -6,6 +6,18 @@ const replay = document.querySelector("#replay");
 
 runAnimation();
 
+// Resets countdown
+function resetDOM() {
+	counter.classList.remove("hide");
+	finalMessage.classList.remove("show");
+
+	nums.forEach((num) => {
+		num.classList.value = "";
+	});
+	nums[0].classList.add("in");
+}
+
+// Animates countdown
 function runAnimation() {
 	nums.forEach((num, idx) => {
 		const nextToLast = nums.length - 1;
