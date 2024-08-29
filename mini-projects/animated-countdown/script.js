@@ -35,3 +35,9 @@ function runAnimation() {
 		});
 	});
 }
+
+// Event listeners
+replay.addEventListener("click", () => {
+	resetDOM();
+	runAnimation();
+});
