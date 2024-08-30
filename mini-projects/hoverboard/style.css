@@ -12,12 +12,12 @@ body {
 	margin: 0;
 }
 
-.container {
+.hoverboard-container {
 	display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 400px;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	max-width: 400px;
 }
 
 .square {
