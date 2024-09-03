@@ -1,4 +1,4 @@
-# practice-projects
+# mini-projects
 series of projects for web dev learning
 
 ## Built with
