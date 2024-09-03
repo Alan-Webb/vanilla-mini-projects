@@ -1,5 +1,6 @@
 # mini-projects
-series of projects for web dev learning
+
+Collection of widgets, features and mini-apps
 
 ## Built with
 
