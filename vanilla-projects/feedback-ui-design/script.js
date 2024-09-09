@@ -5,7 +5,14 @@ const panel = document.querySelector("#panel");
 
 // Event listeners
 panel.addEventListener("click", (e) => {
-	if (e.target.classList.contains("rating")) {
-		console.log(e.target);
+	if (e.target.parentNode.classList.contains("rating")) {
+		removeActive();
+		e.target.parentNode.classList.add("active");
 	}
 });
+
+function removeActive() {
+	for (let i = 0; i < ratings.length; i++) {
+		ratings[i].classList.remove("active");
+	}
+}
