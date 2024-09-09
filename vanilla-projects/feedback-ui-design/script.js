@@ -8,11 +8,21 @@ selectedRating = "Satisfied";
 
 // Event listeners
 ratingsContainer.addEventListener("click", (e) => {
-	if (e.target.parentNode.classList.contains("rating")) {
+	if (
+		e.target.parentNode.classList.contains("rating") &&
+		e.target.nextElementSibling
+	) {
 		removeActive();
 		e.target.parentNode.classList.add("active");
 		selectedRating = e.target.nextElementSibling.innerHTML;
-		console.log(selectedRating);
+	} else if (
+		e.target.parentNode.classList.contains("rating") &&
+		e.target.previousSibling &&
+		e.target.previousElementSibling.nodeName === "IMG"
+	) {
+		removeActive();
+		e.target.parentNode.classList.add("active");
+		selectedRating = e.target.innerHTML;
 	}
 });
 
