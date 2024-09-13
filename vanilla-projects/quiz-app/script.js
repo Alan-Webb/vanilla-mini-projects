@@ -34,3 +34,10 @@ const quizData = [
 ];
 
 // JS representaion from DOM
+const quiz = document.getElementById("quiz");
+const answerEls = document.querySelectorAll("answer");
+const questionEl = document.getElementById("question");
+const a_text = document.getElementById("a");
+const b_text = document.getElementById("b");
+const c_text = document.getElementById("c");
+const d_text = document.getElementById("d");
