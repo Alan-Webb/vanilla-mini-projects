@@ -5,6 +5,10 @@
 	padding: 0;
 }
 
+:root {
+	--vhs-bg-color: #2b52ff;
+}
+
 .vhs-container {
 	position: relative;
 	overflow: hidden;
@@ -46,7 +50,7 @@
 	font-size: 2rem;
 	width: 100vw;
 	height: 100vh;
-	background: #2b52ff;
+	background: var(--vhs-bg-color);
 }
 
 .vhs .vhs-text {
@@ -56,9 +60,9 @@
 	animation: vhsText 2s steps(9) 0s infinite alternate;
 }
 
-.vhs .rec {
+.rec {
 	position: absolute;
-	left: 2rem;
+	right: 2rem;
 	bottom: 2rem;
 	animation: vhsText 1s steps(9) 0s infinite alternate;
 }
