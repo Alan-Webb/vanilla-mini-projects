@@ -10,6 +10,8 @@ let playing = false;
 let currentSeconds = totalSeconds;
 timerEl.innerText = formatTime(totalSeconds);
 
+const timerInterval = setInterval(runTimer, 1000);
+
 // Event listeners
 playBtn.addEventListener("click", () => {
 	playing = !playing;
@@ -20,6 +22,18 @@ playBtn.addEventListener("click", () => {
 	playIcon.classList.toggle("fa-play");
 	playIcon.classList.toggle("fa-pause");
 });
+
+// Run timer
+function runTimer() {
+	if (playing) {
+		currentSeconds -= 1;
+		if (currentSeconds <= 0) {
+			clearInterval(timerInterval);
+		}
+		timerEl.innerText = formatTime(currentSeconds);
+		root.style.setProperty("--degrees", calcDeg());
+	}
+}
 
 // Format time
 function formatTime(seconds) {
