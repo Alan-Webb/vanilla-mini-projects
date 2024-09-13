@@ -35,6 +35,11 @@ function runTimer() {
 	}
 }
 
+// Calculate degrees
+function calcDeg() {
+	return `${360 - (currentSeconds / totalSeconds) * 360}deg`;
+}
+
 // Format time
 function formatTime(seconds) {
 	const minutes = Math.floor(seconds / 60);
