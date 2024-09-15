@@ -1,1 +1,26 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
 
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	font-size: 3rem;
+	background-color: #ececec;
+	color: #ddd;
+	gap: 3px;
+}
+
+i {
+	transition: 0.25s ease;
+	cursor: pointer;
+}
+
+.selected {
+	color: goldenrod;
+	filter: drop-shadow(0 0 3px #666);
+}
