@@ -53,6 +53,21 @@ body {
 	justify-content: center;
 }
 
+.user .user-img {
+	border-radius: 50%;
+	height: 75px;
+	width: 75px;
+	object-fit: cover;
+}
+
+.user .user-details {
+  margin-left: 10px;
+}
+
+.user .username {
+  margin: 0;
+}
+
 @media (max-width: 768px) {
 	.testimonial-container {
 		padding: 20px 30px;
