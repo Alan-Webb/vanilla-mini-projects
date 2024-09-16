@@ -19,3 +19,10 @@ body {
 	text-align: center;
 }
 
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	max-width: 1000px;
+}
