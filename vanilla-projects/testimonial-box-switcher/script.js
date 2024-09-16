@@ -51,3 +51,23 @@ const testimonials = [
 		text: "This guy is a young and talented IT professional, proactive and responsible, with a strong work ethic. He is very strong in PSD2HTML conversions and HTML/CSS technology. He is a quick learner, eager to learn new technologies. He is focused and has the good dynamics to achieve due dates and outstanding results.",
 	},
 ];
+
+let idx = 1;
+
+// Switches to next testimonial after set interval
+function updateTestimonial() {
+	const {name, position, photo, text} = testimonials[idx];
+
+	testimonial.innerHTML = text;
+	userImage.src = photo;
+	userName.innerHTML = name;
+	role.innerHTML = position;
+
+	idx++;
+
+	if (idx > testimonials.length - 1) {
+		idx = 0;
+	}
+}
+
+setInterval(updateTestimonial, 10000);
