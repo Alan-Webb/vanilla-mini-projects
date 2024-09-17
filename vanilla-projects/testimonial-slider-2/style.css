@@ -14,8 +14,23 @@ body {
 .testimonial-slider {
 	--slide-count: 5;
 	--slide-width: calc((100% / var(--slide-count)-2em));
-  width: 100%;
-  height: 25em;
-  position: relative;
-  background-color: #c7e8ff;
+	width: 100%;
+	height: 25em;
+	position: relative;
+	background-color: #c7e8ff;
+	overflow: hidden;
+}
+
+.slide {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: var(--slide-width);
+	height: calc(100% - 2em);
+	background-color: #fff;
+	padding: 1.2em;
+	display: flex;
+	flex-direction: column;
+	border-radius: 7px;
+	transition: 0.3s ease-out;
 }
