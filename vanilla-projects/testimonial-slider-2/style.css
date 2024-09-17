@@ -100,6 +100,26 @@ button {
 }
 
 button:hover {
-  background-color: #1c65d9;
+	background-color: #1c65d9;
+}
+
+.slide:nth-child(1) {
+	left: calc((var(--slide-width) * -1));
+}
+
+.slide:nth-child(2) {
+	left: 1em;
+}
+
+.slide:nth-child(3) {
+	left: calc(var(--slide-width) * 1 + 2em);
+}
+
+.slide:nth-child(4) {
+	left: calc(var(--slide-width) * 2 + 3em);
+}
+
+.slide:nth-child(5) {
+	left: calc(var(--slide-width) * 3 + 4em);
 }
 
