@@ -34,3 +34,23 @@ body {
 	border-radius: 7px;
 	transition: 0.3s ease-out;
 }
+
+.testimonial {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial p {
+  color: #4d4d4d;
+  line-height: 1.7em;
+  text-indent: 0.3em;
+  font-style: italic;
+}
+
+.testimonial i {
+  display: inline;
+  font-size: 2.5em;
+  color: #2478ff;
+}
