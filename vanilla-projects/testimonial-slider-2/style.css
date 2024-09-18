@@ -8,17 +8,15 @@
 
 body {
 	font-family: "Ubuntu Condensed", sans-serif;
-	background-color: pink;
 }
 
 .testimonial-slider {
 	--slide-count: 5;
 	--slide-width: calc((100% / var(--slide-count)-2em));
 	width: 100%;
-	height: 25em;
+	height: 25rem;
 	position: relative;
 	background-color: #c7e8ff;
-	overflow: hidden;
 }
 
 .slide {
@@ -123,3 +121,20 @@ button:hover {
 	left: calc(var(--slide-width) * 3 + 4em);
 }
 
+@media (max-width: 1200px) {
+	.testimonial-slider {
+		--slide-count: 3;
+	}
+}
+
+@media (max-width: 992px) {
+	.testimonial-slider {
+		--slide-count: 2;
+	}
+}
+
+@media (max-width: 640px) {
+	.testimonial-slider {
+		--slide-count: 1;
+	}
+}
