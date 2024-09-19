@@ -5,12 +5,21 @@
 }
 
 body {
+	background-color: #f5f5f5;
+	color: #444;
 	font-family: "Poppins", sans-serif;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	overflow: hidden;
 	margin: 0;
 }
+
+h1 {
+	color: rgb(179, 131, 226);
+	font-size: 6rem;
+	text-align: center;
+	opacity: 0.4;
+}
+
