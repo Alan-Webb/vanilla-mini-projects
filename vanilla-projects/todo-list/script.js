@@ -7,7 +7,7 @@ const todosUL = document.getElementById("todos");
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
 
-	addTodd();
+	addTodo();
 });
 
 // Adds todo to list (3)
@@ -16,5 +16,28 @@ function addTodo(todo) {
 
 	if (todo) {
 		todoText = todo.text;
+	}
+	// console.log(todoText);
+	// construct list item (4)
+	if (todoText) {
+		const todoEL = document.createElement("li");
+		if (todo && todo.completed) {
+			todoEL.classList.add("completed");
+		}
+		todoEL.innerText = todoText;
+
+		todoEL.addEventListener("click", () =>
+			todoEL.classList.toggle("completed")
+		);
+
+		todoEL.addEventListener("contextmenu", (e) => {
+			e.preventDefault();
+
+			todoEL.remove();
+		});
+
+		todosUL.appendChild(todoEL);
+
+		input.value = "";
 	}
 }
