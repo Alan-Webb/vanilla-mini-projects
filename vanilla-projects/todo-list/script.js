@@ -33,14 +33,18 @@ function addTodo(todo) {
 		}
 		todoEL.innerText = todoText;
 
-		todoEL.addEventListener("click", () =>
-			todoEL.classList.toggle("completed")
-		);
+		todoEL.addEventListener("click", () => {
+			todoEL.classList.toggle("completed");
+			// Save completed to LS (8)
+			updateLS();
+		});
 
 		todoEL.addEventListener("contextmenu", (e) => {
 			e.preventDefault();
 
 			todoEL.remove();
+			// Save completed to LS (8)
+			updateLS();
 		});
 
 		todosUL.appendChild(todoEL);
@@ -65,4 +69,6 @@ function updateLS() {
 			completed: todoEL.classList.contains("completed"),
 		});
 	});
+
+	localStorage.setItem("todos", JSON.stringify(todos));
 }
