@@ -96,3 +96,9 @@ body {
 .comment-box .comment-submit:hover {
 	background-color: #0076bf;
 }
+
+@media (max-width: 660px) {
+	.comment-session {
+		width: 100%;
+	}
+}
