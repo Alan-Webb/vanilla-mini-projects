@@ -17,3 +17,21 @@ body {
   height: auto;
   margin: 0 auto;
 }
+
+.post-comment .list {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.post-comment .list .user {
+  display: flex;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.post-comment .list .user img {
+  height: 38px;
+  width: 38px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
