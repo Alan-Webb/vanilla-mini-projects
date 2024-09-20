@@ -13,25 +13,72 @@ body {
 }
 
 .comment-session {
-  width: 650px;
-  height: auto;
-  margin: 0 auto;
+	width: 650px;
+	height: auto;
+	margin: 0 auto;
 }
 
 .post-comment .list {
-  width: 100%;
-  margin-bottom: 12px;
+	width: 100%;
+	margin-bottom: 12px;
 }
 
 .post-comment .list .user {
-  display: flex;
-  padding: 8px;
-  overflow: hidden;
+	display: flex;
+	padding: 8px;
+	overflow: hidden;
 }
 
 .post-comment .list .user img {
-  height: 38px;
-  width: 38px;
-  margin-right: 10px;
-  border-radius: 50%;
+	height: 38px;
+	width: 38px;
+	margin-right: 10px;
+	border-radius: 50%;
+}
+
+.comment-session .name {
+	text-transform: uppercase;
+	font-weight: 500;
+}
+
+.post-comment .list .day {
+	font-size: 12px;
+}
+
+.post-comment .comment-post {
+	padding: 0 0 15px 58px;
+}
+
+.comment-box {
+	padding: 10px;
+	overflow: hidden;
+}
+
+.comment-box .user {
+	display: flex;
+	width: min-content;
+}
+
+.comment-box .image img {
+	width: 24px;
+	height: 24px;
+	margin-right: 10px;
+	border-radius: 50%;
+}
+
+.comment-box textarea {
+	background-color: #eee;
+	width: -webkit-fill-available;
+	height: 152px;
+	margin: 10px 0;
+	padding: 10px;
+	resize: inherit;
+	border-radius: 5px;
+  border: none;
+	box-shadow: 0 0 0 0.5px #0003;
+}
+
+.comment-box textarea:focus-visible {
+	box-shadow: inset 0 0 1px #009cff;
+  outline: none;
 }
