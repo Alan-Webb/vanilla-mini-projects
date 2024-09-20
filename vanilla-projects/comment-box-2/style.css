@@ -47,8 +47,7 @@ body {
 	box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
 }
 
-.comment-card,
-h3,
+.comment-card h3,
 .comment-card p {
 	margin-bottom: 1rem;
 }
