@@ -24,6 +24,10 @@ body {
 	position: relative;
 }
 
+.comment-container.opened {
+	display: block;
+}
+
 .comment-container:before {
 	content: "";
 	background-color: #aaa3a3;
