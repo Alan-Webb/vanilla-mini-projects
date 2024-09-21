@@ -1,0 +1,95 @@
+.testimonial-card-container {
+	border: 1px solid black;
+	width: 80%;
+	height: 85vh;
+	margin: 0 auto;
+	border-radius: 25px;
+	position: relative;
+	.testimonial-card {
+		width: 75%;
+		position: absolute;
+		transform: translate(-50%, -50%);
+		left: 50%;
+		top: 50%;
+		transition: all 500ms ease;
+		.card-avatar {
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			margin: 0 auto;
+			background-image: url("https://images.unsplash.com/photo-1580925594670-117567b46f26?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1649&q=80");
+			background-size: cover;
+			background-position: center;
+		}
+		.avatar-1 {
+			background-image: url("https://images.unsplash.com/photo-1542458579-0efc5038d080?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
+		}
+		.avatar-2 {
+			background-image: url("https://images.unsplash.com/photo-1584473457409-ae5c91d7d8b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
+		}
+		.card-quote {
+			text-align: center;
+			font-family: sans-serif;
+			font-size: 1.5em;
+			padding: 10px 0;
+			position: relative;
+			.left-quote {
+				position: absolute;
+				transform: translate(-25%, -25%);
+				top: 0;
+				left: 0;
+				font-size: 3em;
+				color: #696969;
+				z-index: -1;
+			}
+			.right-quote {
+				position: absolute;
+				transform: translate(50%, 50%);
+				bottom: 0;
+				right: 0;
+				font-size: 3em;
+				color: #696969;
+				z-index: -1;
+			}
+		}
+		.card-name {
+			text-align: center;
+			font-family: sans-serif;
+			font-size: 1.25em;
+			padding: 10px 0;
+			position: relative;
+			text-transform: uppercase;
+		}
+		.card-role {
+			font-family: sans-serif;
+			padding: 10px 0;
+			text-align: center;
+			font-style: italic;
+		}
+	}
+	.card-1 {
+		opacity: 0;
+	}
+	.card-2 {
+		opacity: 0;
+	}
+}
+.indicator-buttons-container {
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	padding: 10px 0;
+	.indicator-button {
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		border: 1px solid black;
+		margin: 0 10px;
+		cursor: pointer;
+		transition: all 500ms ease;
+	}
+	.active {
+		background: black;
+	}
+}
