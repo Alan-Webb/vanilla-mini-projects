@@ -1,5 +1,8 @@
-let indicatorButtons = document.getElementsByClassName("indicator-button");
-let testimonialCards = document.getElementsByClassName("testimonial-card");
+const indicatorButtons = document.getElementsByClassName("indicator-button");
+const testimonialCards = document.getElementsByClassName("testimonial-card");
+
+
+// Selects indicator button
 let isActive = false;
 for (let i = 0; i < indicatorButtons.length; i++) {
 	indicatorButtons[i].addEventListener("click", function () {
