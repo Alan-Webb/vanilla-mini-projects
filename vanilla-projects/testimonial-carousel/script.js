@@ -1,8 +1,8 @@
+// JS representation from DOM
 const indicatorButtons = document.getElementsByClassName("indicator-button");
 const testimonialCards = document.getElementsByClassName("testimonial-card");
 
-
-// Selects indicator button
+// Indicator button functionality
 let isActive = false;
 for (let i = 0; i < indicatorButtons.length; i++) {
 	indicatorButtons[i].addEventListener("click", function () {
