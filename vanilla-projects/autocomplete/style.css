@@ -36,3 +36,21 @@ body {
 	padding: 0 60px 0 20px;
 	font-size: 18px;
 }
+
+.search-input .autobox {
+	padding: 0;
+	opacity: 1;
+	pointer-events: auto;
+	max-height: 280px;
+	overflow-y: auto;
+}
+
+.autobox li {
+  list-style-type: none;
+  padding: 8px 12px;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+  font-family: "Poppins", sans-serif;
+}
+
