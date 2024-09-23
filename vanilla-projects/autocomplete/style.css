@@ -12,4 +12,27 @@ body {
 	justify-content: center;
 	height: 100vh;
 	font-family: "Poppins", sans-serif;
+	background-color: #1b2631;
+}
+
+.wrapper {
+	max-width: 450px;
+	width: 100%;
+}
+
+.wrapper .search-input {
+	background-color: #fff;
+	width: 100%;
+	border-radius: 5px;
+	box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+}
+
+.search-input input {
+	height: 55px;
+	width: 100%;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	padding: 0 60px 0 20px;
+	font-size: 18px;
 }
