@@ -2,7 +2,7 @@
 const indicatorButtons = document.getElementsByClassName("indicator-button");
 const testimonialCards = document.getElementsByClassName("testimonial-card");
 
-// Indicator button functionality
+// Testimonial Slider Indicator button functionality
 let isActive = false;
 for (let i = 0; i < indicatorButtons.length; i++) {
 	indicatorButtons[i].addEventListener("click", function () {
