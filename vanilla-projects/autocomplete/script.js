@@ -48,9 +48,26 @@ inputBox.addEventListener("keyup", (e) => {
 
 		searchWrapper.classList.add("active");
 		showSuggestion(emptyArray);
+
+		let allList = autoBox.querySelectorAll("li");
+    
 	} else {
+		searchWrapper.classList.remove("active");
 	}
 });
+
+function select(el) {
+	let selectData = el.textContent();
+	inputBox.value = selectData;
+
+	btn.addEventListener("click", () => {
+		GoogleLink = `https://www.google.com/search?q=${userData}`;
+		linkEl.setAttribute("href", GoogleLink);
+		linkEl.click();
+	});
+
+	searchWrapper.classList.remove("active");
+}
 
 function showSuggestion(list) {
 	let listData;
