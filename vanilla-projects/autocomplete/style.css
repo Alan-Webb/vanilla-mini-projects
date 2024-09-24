@@ -41,10 +41,15 @@ body {
 
 .search-input .autobox {
 	padding: 0;
-	opacity: 1;
+	opacity: 0;
 	pointer-events: auto;
 	max-height: 280px;
 	overflow-y: auto;
+}
+
+.search-input.active .autobox {
+	padding: 10px 8px;
+	opacity: 1;
 }
 
 .autobox li {
@@ -54,6 +59,17 @@ body {
 	cursor: default;
 	border-radius: 3px;
 	font-family: "Poppins", sans-serif;
+  display: none;
+}
+
+.autobox li:hover {
+	background-color: #efefef;
+	cursor: pointer;
+	pointer-events: auto;
+}
+
+.search-input.active .autobox li {
+	display: block;
 }
 
 .btn {
