@@ -17,4 +17,8 @@ const data = [
 	"Udemy",
 ];
 
-const
+// JS representaion from DOM
+const searchWrapper = document.querySelector(".search-input");
+const inputBox = document.querySelector(".input-field");
+const autoBox = document.querySelector(".autobox");
+const btn = document.querySelector(".btn");
