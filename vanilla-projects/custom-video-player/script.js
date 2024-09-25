@@ -15,12 +15,36 @@ play.addEventListener("click", toggleVideoStatus);
 stop.addEventListener("click", stopVideo);
 progress.addEventListener("change", setVideoProgress);
 
-function toggleVideoStatus() {}
+// Play & pause video
+function toggleVideoStatus() {
+	if (video.paused) {
+		video.play();
+	} else {
+		video.pause();
+	}
+}
 
-function updatePlayIcon() {}
+// Update play / pause icon
+function updatePlayIcon() {
+	if (video.paused) {
+		play.innerHTML = '<i class="fa fa-play fa-2x"></i>';
+	} else {
+		play.innerHTML = '<i class="fa fa-pause fa-2x"></i>';
+	}
+}
 
-function updateProgress() {}
+// Update progress & timestamp
+function updateProgress() {
+	return true;
+}
 
-function stopVideo() {}
+// Set video time to progress
+function setVideoProgress() {
+	return true;
+}
 
-function setVideoProgress() {}
+// Stop video
+function stopVideo() {
+	video.currentTime = 0;
+	video.pause();
+}
