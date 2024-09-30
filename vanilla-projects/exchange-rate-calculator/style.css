@@ -25,3 +25,16 @@ h1 {
 p {
 	text-align: center;
 }
+
+.btn {
+	color: #fff;
+	background: var(--primary-color);
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 12px;
+	padding: 5px 12px;
+}
+
+.money-img {
+	width: 150px;
+}
