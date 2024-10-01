@@ -10,11 +10,16 @@ const swap = document.getElementById("swap");
 
 // Event listeners
 currencyEl_one.addEventListener("change", calculate);
-amountEl_one.addEventListener("change", calculate);
+amountEl_one.addEventListener("input", calculate);
 currencyEl_two.addEventListener("change", calculate);
-amountEl_two.addEventListener("change", calculate);
+amountEl_two.addEventListener("input", calculate);
 
 // Fetch exchange rates and update DOM
-function calculate() {}
+function calculate() {
+	const currencyEl_one = currencyEl_one.value;
+	const currencyEl_two = currencyEl_two.value;
+
+	console.log("currency_one, currency_two");
+}
 
 calculate();
