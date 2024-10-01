@@ -19,7 +19,14 @@ function calculate() {
 	const currencyEl_one = currencyEl_one.value;
 	const currencyEl_two = currencyEl_two.value;
 
-	console.log("currency_one, currency_two");
+	fetch("https://open.exchangerate-api.com/v6/latest")
+		.then((res) => res.json())
+		.then((data) => {
+			//  console.log(data);
+			const rate = data.rates[currency_two] / data.rates[currency_one];
+			rateEl.innerText = `1 ${currency_one} = ${rate} ${currency_two}`;
+			amountEl_two.value = (amountEl_one.value * rate).toFixed(2);
+		});
 }
 
 calculate();
