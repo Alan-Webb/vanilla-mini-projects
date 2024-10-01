@@ -14,6 +14,13 @@ amountEl_one.addEventListener("input", calculate);
 currencyEl_two.addEventListener("change", calculate);
 amountEl_two.addEventListener("input", calculate);
 
+swap.addEventListener("click", () => {
+	const temp = currencyEl_one.value;
+	currencyEl_one.value = currencyEl_two.value;
+	currencyEl_two.value = temp;
+	calculate();
+});
+
 // Fetch exchange rates and update DOM
 function calculate() {
 	const currencyEl_one = currencyEl_one.value;
