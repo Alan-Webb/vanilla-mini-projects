@@ -80,3 +80,16 @@ header p {
 	margin: 30px 0;
 }
 
+button,
+input[tupe="submit"] {
+	background-color: var(--secondary-color);
+	border: 0;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	padding: 8px 12px;
+}
+
+button:focus {
+	outline: none;
+}
