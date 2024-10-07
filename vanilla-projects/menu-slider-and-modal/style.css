@@ -130,7 +130,6 @@ button:focus {
 
 .modal-container.show-modal {
 	display: block;
-	opacity: 1;
 }
 
 .modal {
