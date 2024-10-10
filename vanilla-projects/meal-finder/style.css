@@ -52,3 +52,9 @@ input[type="text"] {
 	border-bottom-right-radius: 4px;
 }
 
+/* MEDIA QUERIES */
+@media (max-width: 500px) {
+	input[type="text"] {
+		width: 100%;
+	}
+}
