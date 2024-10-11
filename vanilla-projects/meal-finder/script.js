@@ -5,3 +5,8 @@ const random = document.getElementById("random");
 const mealsEl = document.getElementById("meals");
 const resultHeading = document.getElementById("result-heading");
 const single_mealEl = document.getElementById("single-meal");
+
+
+
+// Event listeners
+submit.addEventListener("submit", searchMeal);
