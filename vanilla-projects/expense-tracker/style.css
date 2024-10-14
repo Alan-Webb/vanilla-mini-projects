@@ -18,3 +18,13 @@ body {
 	margin: 0;
 	font-family: "Lato", sans-serif;
 }
+
+.container {
+	margin: 30px auto;
+	width: 350px;
+}
+
+h1 {
+	letter-spacing: 1px;
+	margin: 0;
+}
