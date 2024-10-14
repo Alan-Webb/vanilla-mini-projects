@@ -115,3 +115,25 @@ input [type="number"] {
 	padding: 10px;
 	margin: 10px 0;
 }
+
+.list li.plus {
+	border-right: 5px solid #2ecc71;
+}
+
+.list li.minus {
+	border-right: 5px solid #c0392b;
+}
+
+.delete-btn {
+	background-color: #e74c3c;
+	border: none;
+	color: #fff;
+	font-size: 20px;
+	line-height: 20px;
+	padding: 2px 5px;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translate(-100%, -50%);
+  opacity: 0;
+}
