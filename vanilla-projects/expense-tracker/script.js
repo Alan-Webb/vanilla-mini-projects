@@ -36,6 +36,10 @@ function addTransactionDOM(transaction) {
 
 	list.appendChild(item);
 }
+
+// Update the balance, income and expense
+function updateValues() {}
+
 // Init app
 function init() {
 	list.innerHTML = "";
