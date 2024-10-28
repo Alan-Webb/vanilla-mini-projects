@@ -4,10 +4,10 @@ const slides = document.querySelectorAll(".slide");
 const leftBtn = document.getElementById("left");
 const rightBtn = document.getElementById("right");
 
-// global vars
+// Global vars
 let activeSlide = 0;
 
-// event listeners
+// Event listeners
 rightBtn.addEventListener("click", () => {
 	activeSlide++;
 
@@ -35,7 +35,7 @@ function setBgToBody() {
 	body.style.backgroundImage = slides[activeSlide].style.backgroundImage;
 }
 
-// creates node list of slides & add/remove active class
+// Add/remove active class
 function setActiveSlide() {
 	slides.forEach((slide) => slide.classList.remove("active"));
 	slides[activeSlide].classList.add("active");
