@@ -35,3 +35,17 @@ async function showPosts() {
 		postsContainer.appendChild(postEl);
 	});
 }
+
+// Show loader & fetch more posts
+function showLoading() {
+	loading.classList.add("show");
+
+	setTimeout(() => {
+		loading.classList.remove("show");
+
+		setTimeout(() => {
+			page++;
+			showPosts();
+		}, 300);
+	}, 1000);
+}
