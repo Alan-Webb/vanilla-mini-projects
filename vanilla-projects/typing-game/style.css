@@ -18,3 +18,18 @@ button {
 	border-radius: 4px;
 	padding: 5px 15px;
 }
+
+select {
+	width: 200px;
+	padding: 5px;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border-radius: 0;
+	background-color: #a7c5e3;
+}
+
+select:focus,
+button:focus {
+	outline: 0;
+}
