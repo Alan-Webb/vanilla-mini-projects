@@ -32,3 +32,13 @@ const words = [
 	"drag",
 	"loving",
 ];
+
+// Global Vars
+let randomWord;
+let score = 0;
+let time = 10;
+
+// Generate random word from array
+function getRandomWord() {
+	return words[Math.floor(Math.random() * words.length)];
+}
