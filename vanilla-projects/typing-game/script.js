@@ -38,8 +38,23 @@ let randomWord;
 let score = 0;
 let time = 10;
 
+// Set difficulty to value in ls or medium
+let difficulty =
+	localStorage.getItem("difficulty") !== null
+		? localStorage.getItem("difficulty")
+		: "medium";
+
+// Set difficulty select value
+difficultySelect.value =
+	localStorage.getItem("difficulty") !== null
+		? localStorage.getItem("difficulty")
+		: "medium";
+
 // Focus on text on start
 text.focus();
+
+// Start counting down
+const timeInterval = setInterval(updateTime, 1000);
 
 // Generate random word from array
 function getRandomWord() {
@@ -69,6 +84,19 @@ function updateTime() {
 		gameOver();
 	}
 }
+
+// Game over
+function gameOver() {
+	endgameEl.innerHTML = `
+    <h1>Time ran out</h1>
+    <p>Your final score is ${score}</p>
+    <button onclick="location.reload()">Reload</button>
+  `;
+
+	endgameEl.style.display = "flex";
+}
+
+addWordToDOM();
 
 // Event listeners
 
