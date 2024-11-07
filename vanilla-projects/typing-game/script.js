@@ -38,7 +38,16 @@ let randomWord;
 let score = 0;
 let time = 10;
 
+// Focus on text on start
+text.focus();
+
 // Generate random word from array
 function getRandomWord() {
 	return words[Math.floor(Math.random() * words.length)];
+}
+
+// Add word to DOM
+function addWordToDOM() {
+	randomWord = getRandomWord();
+	word.innerHTML = randomWord;
 }
