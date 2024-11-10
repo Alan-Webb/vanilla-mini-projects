@@ -60,8 +60,16 @@ const data = [
 data.forEach(createBox);
 
 // Create speech boxes
-function createBox(item){
-  const box = document.createElement("div");
+function createBox(item) {
+	const box = document.createElement("div");
 
-  
+	const {image, text} = item;
+
+	box.classList.add("box");
+	box.innerHTML = `
+    <img src="${image}" alt="${text}"/>
+    <p class="info">${text}</p>
+  `;
+
+	main.appendChild(box);
 }
