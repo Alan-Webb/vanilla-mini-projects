@@ -8,51 +8,51 @@ const closeBtn = document.getElementById("close");
 
 const data = [
 	{
-		image: "./img/drink.jpg",
+		image: "./images/drink.jpg",
 		text: "I'm Thirsty",
 	},
 	{
-		image: "./img/food.jpg",
+		image: "./images/food.jpg",
 		text: "I'm Hungry",
 	},
 	{
-		image: "./img/tired.jpg",
+		image: "./images/tired.jpg",
 		text: "I'm Tired",
 	},
 	{
-		image: "./img/hurt.jpg",
+		image: "./images/hurt.jpg",
 		text: "I'm Hurt",
 	},
 	{
-		image: "./img/happy.jpg",
+		image: "./images/happy.jpg",
 		text: "I'm Happy",
 	},
 	{
-		image: "./img/angry.jpg",
+		image: "./images/angry.jpg",
 		text: "I'm Angry",
 	},
 	{
-		image: "./img/sad.jpg",
+		image: "./images/sad.jpg",
 		text: "I'm Sad",
 	},
 	{
-		image: "./img/scared.jpg",
+		image: "./images/scared.jpg",
 		text: "I'm Scared",
 	},
 	{
-		image: "./img/outside.jpg",
+		image: "./images/outside.jpg",
 		text: "I Want To Go Outside",
 	},
 	{
-		image: "./img/home.jpg",
+		image: "./images/home.jpg",
 		text: "I Want To Go Home",
 	},
 	{
-		image: "./img/school.jpg",
+		image: "./images/school.jpg",
 		text: "I Want To Go To School",
 	},
 	{
-		image: "./img/grandma.jpg",
+		image: "./images/grandma.jpg",
 		text: "I Want To Go To Grandmas",
 	},
 ];
