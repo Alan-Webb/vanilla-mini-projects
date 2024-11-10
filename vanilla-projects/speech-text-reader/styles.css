@@ -12,12 +12,20 @@ body {
 }
 
 h1 {
-  text-align: center;
+	text-align: center;
 }
 
 .container {
-  margin: auto;
-  padding: 20px;
+	margin: auto;
+	padding: 20px;
 }
 
-
+.btn {
+	cursor: pointer;
+	background-color: darksalmon;
+	border: none;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 16px;
+	padding: 8px;
+}
