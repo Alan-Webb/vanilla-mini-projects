@@ -74,6 +74,13 @@ function createBox(item) {
 	main.appendChild(box);
 }
 
+// Store voices
+let voices = [];
+
+function getVoices() {
+	voices = speechSynthesis.getVoices();
+}
+
 // Toggle text box
 toggleBtn.addEventListener("click", () =>
 	document.getElementById("text-box").classList.toggle("show")
