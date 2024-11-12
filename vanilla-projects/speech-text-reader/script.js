@@ -83,6 +83,9 @@ function createBox(item) {
 	main.appendChild(box);
 }
 
+// Initialize speech synth
+const message = new SpeechSynthesisUtterance();
+
 // Store voices
 let voices = [];
 
@@ -96,6 +99,11 @@ function getVoices() {
 
 		voicesSelect.appendChild(option);
 	});
+}
+
+// Set text
+function setTextMessage(text) {
+	message.text = text;
 }
 
 // Voices changed
