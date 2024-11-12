@@ -76,6 +76,10 @@ function createBox(item) {
 		speakText();
 	});
 
+	// Add active effect
+	box.classList.add("active");
+	setTimeout(() => box.classList.remove("active"), 800);
+
 	main.appendChild(box);
 }
 
