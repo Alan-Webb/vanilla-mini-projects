@@ -124,4 +124,7 @@ closeBtn.addEventListener("click", () =>
 	document.getElementById("text-box").classList.remove("show")
 );
 
+// Change voice
+voicesSelect.addEventListener("change", setVoice)
+
 getVoices();
