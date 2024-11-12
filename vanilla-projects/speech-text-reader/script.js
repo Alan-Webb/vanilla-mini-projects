@@ -1,7 +1,7 @@
 // JS representation from DOM
 const main = document.querySelector("main");
 const voicesSelect = document.getElementById("voices");
-const textArea = document.getElementById("text");
+const textarea = document.getElementById("text");
 const readBtn = document.getElementById("read");
 const toggleBtn = document.getElementById("toggle");
 const closeBtn = document.getElementById("close");
@@ -66,24 +66,25 @@ function createBox(item) {
 	const {image, text} = item;
 
 	box.classList.add("box");
+
 	box.innerHTML = `
-    <img src="${image}" alt="${text}"/>
+    <img src="${image}" alt="${text}" />
     <p class="info">${text}</p>
   `;
 
 	box.addEventListener("click", () => {
-		setTextMessage();
+		setTextMessage(text);
 		speakText();
-	});
 
-	// Add active effect
-	box.classList.add("active");
-	setTimeout(() => box.classList.remove("active"), 800);
+		// Add active effect
+		box.classList.add("active");
+		setTimeout(() => box.classList.remove("active"), 800);
+	});
 
 	main.appendChild(box);
 }
 
-// Initialize speech synth
+// Init speech synth
 const message = new SpeechSynthesisUtterance();
 
 // Store voices
@@ -94,6 +95,7 @@ function getVoices() {
 
 	voices.forEach((voice) => {
 		const option = document.createElement("option");
+
 		option.value = voice.name;
 		option.innerText = `${voice.name} ${voice.lang}`;
 
@@ -111,7 +113,7 @@ function speakText() {
 	speechSynthesis.speak(message);
 }
 
-// Set Voice
+// Set voice
 function setVoice(e) {
 	message.voice = voices.find((voice) => voice.name === e.target.value);
 }
@@ -124,12 +126,18 @@ toggleBtn.addEventListener("click", () =>
 	document.getElementById("text-box").classList.toggle("show")
 );
 
-// Close Button
+// Close button
 closeBtn.addEventListener("click", () =>
 	document.getElementById("text-box").classList.remove("show")
 );
 
 // Change voice
 voicesSelect.addEventListener("change", setVoice);
+
+// Read text button
+readBtn.addEventListener("click", () => {
+	setTextMessage(textarea.value);
+	speakText();
+});
 
 getVoices();
