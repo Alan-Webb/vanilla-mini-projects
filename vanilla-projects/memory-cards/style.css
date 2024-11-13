@@ -42,3 +42,8 @@ h1 button {
   padding: 5px 10px;
 }
 
+.btn-ghost {
+  border: 0;
+  background-color: transparent;
+}
+
