@@ -15,3 +15,24 @@ body {
 	margin: 0;
 	overflow: hidden;
 }
+
+h1 {
+	position: relative;
+}
+
+h1 button {
+	position: absolute;
+	right: 0;
+	transform: translate(120%, -50%);
+	z-index: 2;
+}
+
+.btn {
+	background-color: #fff;
+	border: 1px solid #aaa;
+	border-radius: 3px;
+	cursor: pointer;
+	font-size: 14px;
+	margin-top: 20px;
+	padding: 10px 15px;
+}
