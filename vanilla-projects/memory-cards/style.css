@@ -85,3 +85,15 @@ h1 button {
 	position: relative;
 }
 
+.inner-card-front,
+.inner-card-back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	background-color: #fff;
+}
