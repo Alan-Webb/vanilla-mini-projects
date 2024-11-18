@@ -32,3 +32,8 @@ const cardsData = [
 		answer: "thisIsAVariable",
 	},
 ];
+
+// Create all cards
+function createCards() {
+	cardData.forEach((data, index) => createCard(data, index));
+}
