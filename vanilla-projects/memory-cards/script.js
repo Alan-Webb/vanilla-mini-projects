@@ -15,7 +15,7 @@ const addContainer = document.getElementById("add-container");
 let currentActiveCard = 0;
 
 // Store DOM cards
-const cardEl = [];
+const cardsEl = [];
 
 // Store card data
 const cardsData = [
@@ -65,9 +65,16 @@ function createCard(data, index) {
 	card.addEventListener("click", () => card.classList.toggle("show-answer"));
 
 	// Add to DOM cards
-	cardEl.push(card);
+	cardsEl.push(card);
 
 	cardsContainer.appendChild(card);
+
+	updateCurrentText();
 }
 
 createCards();
+
+// Show number of cards
+function updateCurrentText() {
+	currentEl.innerText = `${currentActiveCard + 1}/${cardsEl.length}`;
+}
