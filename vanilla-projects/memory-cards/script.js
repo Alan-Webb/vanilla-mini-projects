@@ -35,7 +35,7 @@ const cardsData = [
 
 // Create all cards
 function createCards() {
-	cardData.forEach((data, index) => createCard(data, index));
+	cardsData.forEach((data, index) => createCard(data, index));
 }
 
 // Create single card in DOM
@@ -61,4 +61,13 @@ function createCard(data, index) {
   </div>
 </div>
   `;
+
+	card.addEventListener("click", () => card.classList.toggle("show-answer"));
+
+	// Add to DOM cards
+	cardEl.push(card);
+
+	cardsContainer.appendChild(card);
 }
+
+createCards();
