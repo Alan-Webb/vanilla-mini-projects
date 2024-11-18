@@ -37,3 +37,28 @@ const cardsData = [
 function createCards() {
 	cardData.forEach((data, index) => createCard(data, index));
 }
+
+// Create single card in DOM
+function createCard(data, index) {
+	const card = document.createElement("div");
+	card.classList.add("card");
+
+	if (index === 0) {
+		card.classList.add("active");
+	}
+
+	card.innerHTML = `
+  <div class="inner-card">
+  <div class="inner-card-front">
+    <p>
+      ${data.question}
+    </p>
+  </div>
+  <div class="inner-card-back">
+    <p>
+      ${data.answer}
+    </p>
+  </div>
+</div>
+  `;
+}
