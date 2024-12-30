@@ -7,7 +7,6 @@ Collection of widgets, features and mini-apps
 - HTML5
 - CSS3
 - Javascript
-- Tailwind CSS
 
 ## Author
 
