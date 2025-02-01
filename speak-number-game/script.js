@@ -19,3 +19,11 @@ function onSpeak(e) {
 	writeMessage(msg);
 	checkNumber(msg);
 }
+
+// Write what user speaks
+function writeMessage(msg) {
+	msgEl.innerHTML = `
+    <div>You said: </div>
+    <span class="box">${msg}</span>
+  `;
+}
