@@ -27,3 +27,7 @@ function writeMessage(msg) {
     <span class="box">${msg}</span>
   `;
 }
+
+// Check msg against number
+function checkNumber(msg) {
+  const num = +msg;
